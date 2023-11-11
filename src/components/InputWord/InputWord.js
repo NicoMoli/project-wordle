@@ -1,13 +1,13 @@
 import React from "react";
 
-function InputWord({ answer, handleSetAnswer, handleSubmitWord }) {
+function InputWord({ answerWritten, handleSetAnswer, handleSubmitWord }) {
   return (
     <form class="guess-input-wrapper" onSubmit={handleSubmitWord}>
-      <label for="guess-input">Enter guess:</label>
+      <label htmlFor="guess-input">Enter guess:</label>
       <input
         id="guess-input"
         type="text"
-        value={answer}
+        value={answerWritten}
         onChange={(e) => handleSetAnswer(e.target.value.toUpperCase())}
         pattern="^[A-Z]{5}$"
       />
