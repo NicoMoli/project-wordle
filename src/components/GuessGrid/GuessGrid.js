@@ -1,9 +1,10 @@
 import React from "react";
 import { range } from "../../utils";
 import { checkGuess } from "../../game-helpers";
+import { NUM_OF_GUESSES_ALLOWED } from "../../constants";
 
-function Guess({ words, answer }) {
-  const numOfRows = range(0, 6, 1);
+function GuessGrid({ words, answer }) {
+  const numOfRows = range(0, NUM_OF_GUESSES_ALLOWED, 1);
   const numOfColumns = range(0, 5, 1);
 
   return (
@@ -36,4 +37,4 @@ function Guess({ words, answer }) {
   );
 }
 
-export default Guess;
+export default GuessGrid;
